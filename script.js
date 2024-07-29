@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
     const cells = document.querySelectorAll('.cell');
     const displayContent = document.querySelector('.store');
+    const btn= document.querySelector('.clr')
     let currentInput ='';
 
     cells.forEach(cell =>{
@@ -27,8 +28,20 @@ document.addEventListener("DOMContentLoaded",()=>{
                 operator = '';
 
            }
+           else if(value==='clear'){
+            displayContent.textContent = '';
+            currentInput = '';
+            firstOperand = '';
+            secondOperand = '';
+            operator = '';
+           }
+
+           
+
+           
         });
         });
+        
         function calculate(firstOperand, secondOperand, operator) {
             switch (operator) {
                 case '+':
